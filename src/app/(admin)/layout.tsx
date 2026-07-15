@@ -28,7 +28,6 @@ const adminNavItems: DashboardNavItem[] = [
     title: "Settings",
     href: "/admin-dashboard/settings",
     icon: "settings",
-    disabled: true,
   },
 ];
 
