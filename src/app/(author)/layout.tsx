@@ -42,6 +42,7 @@ export default function AuthorLayout({
     <DashboardShell
       items={authorNavItems}
       sectionLabel="Author dashboard"
+      showSupportWidget
       user={{
         name: "Demo Name",
         email: "demo@authorhub.com",

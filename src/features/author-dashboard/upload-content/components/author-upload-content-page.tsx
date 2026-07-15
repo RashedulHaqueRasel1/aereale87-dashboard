@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ChevronDown, CircleHelp, FileUp, Plus, Upload } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -94,7 +95,10 @@ function CompactInput({ placeholder }: { placeholder: string }) {
 
 function QuickInfoCard() {
   return (
-    <div className="flex items-start gap-3 border border-stone-200 bg-white p-4">
+    <Link
+      href="/author-dashboard/program-guide"
+      className="flex items-start gap-3 border border-stone-200 bg-white p-4 transition hover:border-green-900/25 hover:shadow-[0_12px_24px_rgba(31,42,36,0.08)]"
+    >
       <div className="mt-0.5 flex size-8 items-center justify-center rounded-full border border-stone-300 text-green-900">
         <CircleHelp className="size-4" strokeWidth={1.8} />
       </div>
@@ -110,7 +114,7 @@ function QuickInfoCard() {
           <Plus className="size-3 rotate-45" strokeWidth={2} />
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

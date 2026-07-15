@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Bell } from "lucide-react";
+import Link from "next/link";
 
 import { Breadcrumbs } from "@/components/dashboard/breadcrumbs";
 import { UserNav } from "@/components/dashboard/user-nav";
@@ -26,13 +27,13 @@ export function Topbar({ user, mobileSidebar }: TopbarProps) {
           </div>
         </div>
         <div className="flex items-center gap-8">
-          <button
-            type="button"
+          <Link
+            href="/author-dashboard/notifications"
             aria-label="View notifications"
             className="inline-flex size-6 items-center justify-center text-white transition-colors hover:text-white/85"
           >
             <Bell className="size-4" />
-          </button>
+          </Link>
           <UserNav user={user} />
         </div>
       </div>

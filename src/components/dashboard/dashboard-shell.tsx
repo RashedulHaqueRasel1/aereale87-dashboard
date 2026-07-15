@@ -1,5 +1,6 @@
 import { MobileSidebar } from "@/components/dashboard/mobile-sidebar";
 import { Sidebar } from "@/components/dashboard/sidebar";
+import { SupportWidget } from "@/components/dashboard/support-widget";
 import { Topbar } from "@/components/dashboard/topbar";
 
 export type DashboardNavItem = {
@@ -24,6 +25,7 @@ type DashboardShellProps = {
   children: React.ReactNode;
   items: DashboardNavItem[];
   sectionLabel: string;
+  showSupportWidget?: boolean;
   user: {
     name: string;
     email: string;
@@ -35,6 +37,7 @@ export function DashboardShell({
   children,
   items,
   sectionLabel,
+  showSupportWidget = false,
   user,
 }: DashboardShellProps) {
   return (
@@ -47,6 +50,7 @@ export function DashboardShell({
             mobileSidebar={<MobileSidebar items={items} sectionLabel={sectionLabel} />}
           />
           <main className="flex-1 px-4 py-4 md:px-6 md:py-6 lg:px-6">{children}</main>
+          {showSupportWidget ? <SupportWidget /> : null}
         </div>
       </div>
     </div>

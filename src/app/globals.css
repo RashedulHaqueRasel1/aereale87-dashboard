@@ -51,6 +51,12 @@
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
+  --home-paper: #fdfaf3;
+  --home-border: #e6dccb;
+  --home-muted: #8d8578;
+  --home-gold: #c8a433;
+  --home-green: #567968;
+  --home-green-deep: #27453b;
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);

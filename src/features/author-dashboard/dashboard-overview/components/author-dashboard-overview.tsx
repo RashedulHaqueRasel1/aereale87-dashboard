@@ -267,17 +267,6 @@ export function AuthorDashboardOverview({ data }: AuthorDashboardOverviewProps) 
           </CardContent>
         </Card>
       </section>
-
-      <div className="pointer-events-none fixed bottom-5 right-5 z-20 hidden lg:block">
-        <div className="flex h-[82px] w-[82px] flex-col items-center justify-center rounded-full border border-[#e4dfd5] bg-[#fcfbf7] shadow-[0_0_4px_rgba(0,0,0,0.25)]">
-          <div className="flex size-10 items-center justify-center rounded-full bg-[#dbe8f6] text-[12px] font-bold text-[#325f91]">
-            CS
-          </div>
-          <span className="mt-1 rounded-full bg-[#d9f1ff] px-2 py-0.5 text-[9px] font-bold tracking-[0.08em] text-[#427ab6]">
-            SUPPORT
-          </span>
-        </div>
-      </div>
     </div>
   );
 }

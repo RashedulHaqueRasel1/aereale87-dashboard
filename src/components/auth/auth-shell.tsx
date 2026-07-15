@@ -1,37 +1,28 @@
 import type { ReactNode } from "react";
-import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 
 type AuthShellProps = {
   children: ReactNode;
   className?: string;
+  narrow?: boolean;
 };
 
-export function AuthShell({ children, className }: AuthShellProps) {
+export function AuthShell({ children, className, narrow = false }: AuthShellProps) {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#f7f4ed] px-4 py-12">
+    <main className="flex min-h-screen items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(249,236,193,0.6),_transparent_38%),linear-gradient(180deg,#f9f4e8_0%,#f3ecdc_100%)] px-4 py-12 sm:px-6">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(39,69,59,0.04)_0,rgba(39,69,59,0.04)_1px,transparent_1px,transparent_18px)] [background-size:18px_18px]"
+      />
       <div
         className={cn(
-          "w-full max-w-[360px] border border-[#ece4d6] bg-white px-6 py-7 shadow-[0_12px_40px_-28px_rgba(58,44,10,0.28)]",
+          "relative w-full border border-[var(--home-border)] bg-white/95 px-6 py-8 shadow-[0_32px_80px_-44px_rgba(70,54,14,0.42)] backdrop-blur sm:px-8 sm:py-10",
+          narrow ? "max-w-[480px]" : "max-w-[560px]",
           className
         )}
       >
         {children}
-        <div className="mt-6 flex justify-center gap-3 text-[11px] text-[#9f9a90]">
-          <Link href="/" className="transition-colors hover:text-[#24463d]">
-            Sign In
-          </Link>
-          <Link href="/forgot-password" className="transition-colors hover:text-[#24463d]">
-            Forgot
-          </Link>
-          <Link href="/verify-otp" className="transition-colors hover:text-[#24463d]">
-            OTP
-          </Link>
-          <Link href="/new-password" className="transition-colors hover:text-[#24463d]">
-            Reset
-          </Link>
-        </div>
       </div>
     </main>
   );
