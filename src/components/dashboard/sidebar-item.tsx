@@ -60,7 +60,7 @@ export function SidebarItem({ item, onNavigate }: SidebarItemProps) {
       className={cn(
         "flex h-12 items-center gap-2 px-6 py-3 text-base transition-all",
         isActive
-          ? "rounded-l-[99px] rounded-r-none bg-[#cfaf45] font-bold text-[#f9fafb]"
+          ? "rounded-l-[99px] rounded-r-none bg-[#d9aa38] font-bold text-[#f9fafb] shadow-[0_14px_24px_-18px_rgba(0,0,0,0.7)]"
           : "text-[#fcfbf7] hover:bg-white/8 hover:text-white"
       )}
     >

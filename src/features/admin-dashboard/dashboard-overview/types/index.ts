@@ -3,7 +3,7 @@ export type AdminOverviewStat = {
   value: string;
   change: string;
   detail: string;
-  icon: "traffic" | "tickets" | "authors" | "uptime";
+  icon: "reviews" | "orders" | "authors" | "revenue";
 };
 
 export type AdminActivity = {
@@ -17,6 +17,20 @@ export type AdminDashboardOverviewData = {
   approvals: {
     label: string;
     value: string;
+    tone: "amber" | "rose" | "emerald";
+  }[];
+  spotlight: {
+    title: string;
+    value: string;
+    subtitle: string;
+    trend: string;
   }[];
   activity: AdminActivity[];
+  authors: {
+    id: string;
+    name: string;
+    genre: string;
+    status: string;
+    earnings: string;
+  }[];
 };

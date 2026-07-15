@@ -16,7 +16,11 @@ export function UserNav({ user }: UserNavProps) {
 
   return (
     <div className="flex items-center gap-3">
-      <div className="flex size-10 items-center justify-center overflow-hidden rounded-full bg-[#24352f] text-sm font-semibold text-white ring-1 ring-black/10">
+      <div className="hidden text-right md:block">
+        <p className="text-sm font-semibold leading-4 text-[#fcfbf7]">{user.name}</p>
+        <p className="mt-1 text-xs text-[#d8d1c0]">{user.role}</p>
+      </div>
+      <div className="flex size-10 items-center justify-center overflow-hidden rounded-full border border-white/15 bg-[#24352f] text-sm font-semibold text-white ring-1 ring-black/10">
         {initials}
       </div>
     </div>

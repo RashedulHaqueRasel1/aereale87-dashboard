@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { LogOut, Menu, X } from "lucide-react";
 
 import { Logo } from "@/components/shared/logo";
 import { Button } from "@/components/ui/button";
@@ -37,7 +37,7 @@ export function MobileSidebar({ items, sectionLabel }: MobileSidebarProps) {
       >
         <div
           className={cn(
-            "absolute inset-y-0 left-0 flex w-72 flex-col bg-[#66756d] text-slate-100 transition-transform",
+            "absolute inset-y-0 left-0 flex w-72 flex-col bg-[#5d6d63] text-slate-100 transition-transform",
             open ? "translate-x-0" : "-translate-x-full"
           )}
         >
@@ -63,6 +63,15 @@ export function MobileSidebar({ items, sectionLabel }: MobileSidebarProps) {
               />
             ))}
           </nav>
+          <div className="px-5 pb-6">
+            <button
+              type="button"
+              className="flex h-12 w-full items-center justify-center gap-2 rounded-md border border-[#ef4444] px-2 py-1.5 text-lg font-medium text-[#ef4444] transition-colors hover:bg-white/5"
+            >
+              <LogOut className="size-5" />
+              Log out
+            </button>
+          </div>
         </div>
       </div>
     </>

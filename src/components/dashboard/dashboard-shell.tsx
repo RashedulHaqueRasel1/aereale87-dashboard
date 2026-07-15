@@ -41,7 +41,7 @@ export function DashboardShell({
   user,
 }: DashboardShellProps) {
   return (
-    <div className="min-h-screen bg-[#fcfbf7]">
+    <div className="min-h-screen bg-[#f4efe4]">
       <div className="mx-auto flex min-h-screen w-full">
         <Sidebar items={items} sectionLabel={sectionLabel} />
         <div className="flex min-h-screen min-w-0 flex-1 flex-col lg:pl-64">
@@ -49,7 +49,7 @@ export function DashboardShell({
             user={user}
             mobileSidebar={<MobileSidebar items={items} sectionLabel={sectionLabel} />}
           />
-          <main className="flex-1 px-4 py-4 md:px-6 md:py-6 lg:px-6">{children}</main>
+          <main className="flex-1 px-4 py-5 md:px-6 md:py-6 lg:px-7">{children}</main>
           {showSupportWidget ? <SupportWidget /> : null}
         </div>
       </div>

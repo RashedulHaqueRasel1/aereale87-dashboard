@@ -2,15 +2,9 @@ import { DashboardShell, type DashboardNavItem } from "@/components/dashboard/da
 
 const adminNavItems: DashboardNavItem[] = [
   {
-    title: "Overview",
+    title: "Dashboard Overview",
     href: "/admin-dashboard",
     icon: "layout-dashboard",
-  },
-  {
-    title: "Moderation",
-    href: "/admin-dashboard/moderation",
-    icon: "shield",
-    disabled: true,
   },
   {
     title: "Authors",
@@ -19,9 +13,21 @@ const adminNavItems: DashboardNavItem[] = [
     disabled: true,
   },
   {
-    title: "Reports",
-    href: "/admin-dashboard/reports",
-    icon: "bar-chart-3",
+    title: "Content Reviews",
+    href: "/admin-dashboard/moderation",
+    icon: "shield",
+    disabled: true,
+  },
+  {
+    title: "Orders",
+    href: "/admin-dashboard/orders",
+    icon: "shopping-cart",
+    disabled: true,
+  },
+  {
+    title: "Settings",
+    href: "/admin-dashboard/settings",
+    icon: "settings",
     disabled: true,
   },
 ];
@@ -34,11 +40,11 @@ export default function AdminLayout({
   return (
     <DashboardShell
       items={adminNavItems}
-      sectionLabel="Admin control room"
+      sectionLabel="Admin dashboard"
       user={{
         name: "Olivia Carter",
         email: "olivia@example.com",
-        role: "Operations Admin",
+        role: "Super Admin",
       }}
     >
       {children}
