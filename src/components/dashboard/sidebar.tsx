@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { LogOut } from "lucide-react";
 
+import { LogoutButton } from "./logout-button";
 import { SidebarItem } from "./sidebar-item";
 import type { DashboardNavItem } from "./dashboard-shell";
 
@@ -55,13 +55,7 @@ export function Sidebar({ items, sectionLabel }: SidebarProps) {
               </div>
             </div>
 
-            <button
-              type="button"
-              className="flex h-12 w-full items-center justify-center gap-1 rounded-md border border-[#ef4444] px-2 py-1.5 text-lg font-medium text-[#ef4444] transition-colors hover:bg-white/5"
-            >
-              <LogOut className="size-5" />
-              <span>Log out</span>
-            </button>
+            <LogoutButton className="gap-1" />
           </div>
         </div>
       </div>

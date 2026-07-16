@@ -23,10 +23,32 @@ export function Topbar({ user, mobileSidebar }: TopbarProps) {
   const notificationsHref = isAdminDashboard
     ? "/admin-dashboard/notifications"
     : "/author-dashboard/notifications";
-  const title = isAdminDashboard ? "Dashboard Overview" : "Dashboard";
-  const subtitle = isAdminDashboard
-    ? "Admin control room"
-    : user.role;
+  const adminPageMeta = pathname.startsWith("/admin-dashboard/authors")
+    ? {
+        title: "Authors",
+        subtitle: "Admin author management",
+      }
+    : pathname.startsWith("/admin-dashboard/support-center")
+      ? {
+          title: "Support Center",
+          subtitle: "Admin support management",
+        }
+    : pathname.startsWith("/admin-dashboard/settings")
+      ? {
+          title: "Settings",
+          subtitle: "Admin control room",
+        }
+      : pathname.startsWith("/admin-dashboard/notifications")
+        ? {
+            title: "Notifications",
+            subtitle: "Admin control room",
+          }
+        : {
+            title: "Dashboard Overview",
+            subtitle: "Admin control room",
+          };
+  const title = isAdminDashboard ? adminPageMeta.title : "Dashboard";
+  const subtitle = isAdminDashboard ? adminPageMeta.subtitle : user.role;
 
   return (
     <header className="sticky top-0 z-30 overflow-hidden border-b border-black/5 bg-[#5d6d63] text-white shadow-[0_10px_35px_-30px_rgba(0,0,0,0.9)]">

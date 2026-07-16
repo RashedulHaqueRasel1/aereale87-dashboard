@@ -1,12 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { LogOut, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 import { Logo } from "@/components/shared/logo";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
+import { LogoutButton } from "./logout-button";
 import type { DashboardNavItem } from "./dashboard-shell";
 import { SidebarItem } from "./sidebar-item";
 
@@ -64,13 +65,7 @@ export function MobileSidebar({ items, sectionLabel }: MobileSidebarProps) {
             ))}
           </nav>
           <div className="px-5 pb-6">
-            <button
-              type="button"
-              className="flex h-12 w-full items-center justify-center gap-2 rounded-md border border-[#ef4444] px-2 py-1.5 text-lg font-medium text-[#ef4444] transition-colors hover:bg-white/5"
-            >
-              <LogOut className="size-5" />
-              Log out
-            </button>
+            <LogoutButton />
           </div>
         </div>
       </div>

@@ -10,19 +10,21 @@ const adminNavItems: DashboardNavItem[] = [
     title: "Authors",
     href: "/admin-dashboard/authors",
     icon: "users",
-    disabled: true,
   },
   {
     title: "Content Reviews",
     href: "/admin-dashboard/moderation",
     icon: "shield",
-    disabled: true,
   },
   {
     title: "Orders",
     href: "/admin-dashboard/orders",
     icon: "shopping-cart",
-    disabled: true,
+  },
+  {
+    title: "Support Center",
+    href: "/admin-dashboard/support-center",
+    icon: "message-square",
   },
   {
     title: "Settings",
